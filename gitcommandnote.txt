@@ -81,3 +81,13 @@ A few common sub commands for git (git is the primary command)
        # the only command that shows the changes
        # not built-in to git, but an alias we added on day 1
        git la
+
+      #removes file from git
+      #you can also do git add filename.ending
+        #works because you're adding the changes. the changes are that it is no longer there
+      git rm filename.ending
+
+      #renames a file  after the primary and sub command write the old file then write the new file name that you want.
+      #use this to rename as git understands this as rename.
+      #makes your place dirty. you have to clean up again afterwards.
+      git mv oldfilename.ending newfilename.ending
