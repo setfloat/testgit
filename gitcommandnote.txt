@@ -119,3 +119,6 @@ GITHUB
   #add a remote called origin (key) that refers to the URL (value)
   # allows me to push (and pull) commits to and from the remote
   git remote add origin (insert URL desired)
+
+  # fetches new commits from the remote branch and merges them into the local master branch
+  ~/P/w/notebook master √ git pull [REMOTE] [BRANCH]
