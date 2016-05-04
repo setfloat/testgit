@@ -94,3 +94,28 @@ A few common sub commands for git (git is the primary command)
 
 
 GITHUB
+  git remote add origin (website url from github)
+  git remote -v
+  git push -u origin master
+    #all git repositories have a default branch and that branch is called master.
+  #  ~/P/w/testgit master √ git push -u origin master
+      name
+
+
+GITHUB
+
+  # push the local current branch (master) to branch (also master) on the origin remote
+  # the first master refers to the local branch
+  # the second master refers to the remote branch
+  ~/P/w/notebook master  √ git push -u origin master
+
+  # once the local master bracnh is connected to a remote branch,
+  # I don't need to specify the remote branch names
+    ~/P/w/notebook master  √ git push
+
+  # also shows the commit log of the local and remote branches
+  git ll
+
+  #add a remote called origin (key) that refers to the URL (value)
+  # allows me to push (and pull) commits to and from the remote
+  git remote add origin (insert URL desired)
