@@ -1,0 +1,83 @@
+A few common sub commands for git (git is the primary command)
+  init
+  git init
+  git status
+  git add
+  git commit
+  git log
+  git ll
+  git la
+
+
+  init
+  git init
+    #running get init creates an invisble folder in the current working directory.  That current working directory
+    #turns the directory to dirty (red x)
+  git status
+    # gives us insight into the staging area
+    # shows files not in staging area (untracked file)
+    # Shows command to use to add files to staging area.
+  git add
+    # Adds files to staging area
+    # prompt remains dirty. files are in staging area.
+    # Set up to be "committed" need to add them.
+    # you can do a git status again after this stage to see where things are currently at. great best practice.
+  git commit
+    # always use a -m "message to add" to add a message relevant to the commit
+    # it should look like this "git commit -m 'Initial commit' "
+    # shows file permissions "4424" learn about those still!
+    #5 things associated with every commit
+      #f5 (Unique ID)
+      #changes
+      #message
+      #timestamp
+      #author of changes
+  git log
+    #shows your author, commit logs. our author is from earlier when we did the git config on a previous day.
+  git ll
+    #just like git log, but is condensed.
+  git la
+    #gives a ton of info. shows all the info down the line.
+    shows changes and all the commits
+    #it is a "less" pager file kind of like a man page.
+  #learn about .gitignore  relative path
+    #you can move files into .gitignore after you create it.
+
+    #adds my signature globally (for all repositories) in this environment
+    git config -- global user.name :NAME:
+    git config -- global user.email "EMAIL"
+
+    #initialize a git repository
+    #create a .git folder in the current working directory
+    git init
+
+      # take a look at the staging area
+      # files can be
+      #     - untracked
+      #     - tracked
+      #     - committed (not in staging area anymore)
+      git status
+
+      #adds changes in a file to the staging area
+       git add <file>
+
+      # creates a special file that acts as the bouncer to the staging area
+      # paths to be ignored are line-separated
+      touch .gitignore
+
+      # commits the changes in the staging area to the commits area
+      # cleans out the staging area ( prepares it for the next commit)
+      git commit -m 'MESSAGE'
+
+       # take a look at the commits area
+       # a bit verbose
+       git log
+
+       # like git log, but less verbose
+       # not built-in to git, but an alias we added on day 1
+       git ll
+
+       #like git log, but extremely verbose
+       # the only command that shows the changes
+       # not built-in to git, but an alias we added on day 1
+       git la
